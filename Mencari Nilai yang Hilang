@@ -1,0 +1,33 @@
+// Mencari Nilai yang Hilang
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    double a, b, c, d, nilai_tertinggi, nilai_terendah, rata_rata;
+    scanf("%lf%lf%lf%lf",&a,&b,&c,&d);
+    if ((a > b) && (a > c) && (a > d) ){
+        nilai_tertinggi = a;
+    }else if ((b > a) && (b > c) && (b > d) ){
+        nilai_tertinggi = b;
+    }else if ( (c > a) && (c > b) && (c > d) ){
+        nilai_tertinggi = c;
+    }else if ( (d > a) && (d > b) && (d > c) ){
+        nilai_tertinggi = d;
+    }
+    if ( (a < b) && (a < c) && (a < d) ){
+        nilai_terendah = a;
+    }else if( (b < a) && (b < c) && (b < d) ){
+        nilai_terendah = b;
+    }else if ( (c < a) && (c < b) && (c < d) ){
+        nilai_terendah = c;
+    }else if ( (d < a) && (d < b) && (d < c) ){
+        nilai_terendah = d;
+    }
+    rata_rata = (nilai_tertinggi+nilai_terendah) / 2;
+    printf("%.1f ", rata_rata);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
