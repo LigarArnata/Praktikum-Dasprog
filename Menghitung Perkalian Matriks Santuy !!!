@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define maks 100
+
+int main() {
+  int matriks1[maks][maks], matriks2[maks][maks], hasil[maks][maks];
+  int i, j, k, m, n, q, jumlah = 0;
+  scanf("%d %d %d",&m, &n, &q);
+    for(i = 0; i < m; i++){
+      for(j = 0; j < n; j++){
+        scanf("%d", &matriks1[i][j]);
+      }
+    }
+    for(i = 0; i < n; i++){
+      for(j = 0; j < q; j++){
+        scanf("%d", &matriks2[i][j]);
+      }
+    }
+    for(i = 0; i < m; i++){
+      for(j = 0; j < q; j++){
+            hasil[i][j] = 0;
+        for(k = 0; k < n; k++){
+          hasil[i][j] = hasil[i][j] + (matriks1[i][k] * matriks2[k][j]);
+        }
+        printf("%d ", hasil[i][j]);
+      }if (j == (q-1)) printf("\n");
+              else printf("\n");
+    }
+
+
+  return 0;
+}
+
