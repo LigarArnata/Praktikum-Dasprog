@@ -1,0 +1,36 @@
+// Cari Barang
+
+#include <stdio.h>
+#include <string.h>
+#define size 50
+
+int main() {
+  int t, n;
+  scanf("%d", &t);
+  for (int i = 0; i < t; i++){
+
+    scanf("%d", &n);
+    char barang1[n][size];
+        for (int i = 0; i <= n; i++){
+            gets(barang1[i]);
+    }
+   int ke, kondisi = 1;
+    scanf("%d", &ke);
+    char barang2[ke][size];
+        for (int i = 0; i <= ke; i++){
+            gets(barang2[i]);
+    }
+
+        for (int i = 1; i <= ke; i++){
+        kondisi = 1;
+            for (int j = 0; j <= n; j++){
+                if(strcmp(barang2[i], barang1[j]) == 0) {
+                printf("Yay ada di laci ke-%d (/^^)/\n", j);
+                kondisi = 0;
+                break;
+            }
+        }if(kondisi) printf("Ga ketemuu (--;)\n");
+      }
+    }
+  return 0;
+}
