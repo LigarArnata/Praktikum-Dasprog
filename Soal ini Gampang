@@ -1,0 +1,33 @@
+// Soal ini Gampang
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  unsigned long long int n,m,arr_m[100],arr_n[100],sum = 0;
+  int i,j,arC = 0;
+  scanf("%llu \n", &n);
+  scanf("%llu \n", &m);
+  while (arC<m){
+  scanf("%llu", &arr_m[arC]);
+  arC++;
+  }
+  arC = n;
+  while (n>0){
+  scanf("%d%d", &i, &j);
+    while (i<=j){
+        sum += arr_m[i-1];
+        i++;
+  }
+  arr_n[n-1] = sum;
+   sum = 0;
+  n--;
+ }
+  while (arC > n){
+    printf("%llu\n", arr_n[arC-1]);
+    arC--;
+  }
+    return 0;
+}
