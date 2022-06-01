@@ -1,0 +1,17 @@
+// Bisa Kah ?
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+unsigned int N, Ai;     
+scanf("%d", &N);     
+unsigned int angka [N];      
+for(Ai=0 ; Ai < N ; Ai++) 
+scanf("%d", &angka[Ai]);     
+for(Ai=0 ; Ai < N ; Ai++) 
+printf("POTTER SEMANGAT\n");         
+    return 0;
+}
