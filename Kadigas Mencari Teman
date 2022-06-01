@@ -1,0 +1,25 @@
+// Kadigas Mencari Teman
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char ch_1,ch_2,ch_3;
+    int x, formula_1, formula_2,formula_3;
+    scanf("%c %c %c",&ch_1, &ch_2, &ch_3);
+    scanf("\n%d", &x);
+    formula_1 = ch_1 + x;
+    formula_2 = ch_2 + x;
+    formula_3 = ch_3 + x;
+    if ((formula_1 >= 97 && formula_1 <= 122||formula_1 >= 65 && formula_1 <= 90)&&
+        (formula_2 >= 97 && formula_2 <= 122||formula_2 >= 65 && formula_2 <= 90)&&
+        (formula_3 >= 97 && formula_3 <= 122||formula_3 >= 65 && formula_3 <= 90)){
+            printf("Kadigas Masuk Room A");
+    }else{
+            printf("Kadigas Masuk Room B");
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
