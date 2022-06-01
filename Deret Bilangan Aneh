@@ -1,0 +1,42 @@
+// Deret Bilangan Aneh
+
+#include <stdio.h>
+
+void fibo(int);
+int tribonacci(int angka)
+{
+    if ((angka == 0)||(angka == 1)||(angka == 2)){
+        return 0;
+    }if (angka == 3){
+        return 1;
+    }else{
+        return tribonacci(angka-1)+tribonacci(angka-2)+tribonacci(angka-3);
+    }
+}
+int fibonacci(int angka)
+{
+    if(angka == 1){
+        return 68;
+    }if(angka == 2){
+        return 112;
+    }else{
+        return fibonacci(angka-1)+fibonacci(angka-2);
+    }
+
+}
+
+int main()
+{
+    int t, N,i;
+    scanf("%d", &N);
+    for (i = 0;i<N; i++){
+        scanf("%d", &t);
+        if(t<=10){
+            printf("%d\n", tribonacci(t));
+        }if(t>10){
+            t=t-10;
+            printf("%d\n", fibonacci(t));
+        }
+    }
+    return 0;
+}
