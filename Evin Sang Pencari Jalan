@@ -1,0 +1,15 @@
+// Evin Sang Pencari Jalan
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     long long int x_1, x_2, y_1, y_2, formula;
+    scanf("%lld %lld %lld %lld", &x_1, &y_1, &x_2, &y_2);
+    formula = ((x_2-x_1)*(y_2-y_1))+1;
+    printf("%lld", formula);
+  
+    return 0;
+}
