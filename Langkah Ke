@@ -1,0 +1,33 @@
+// Langkah Ke
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void fungsi(int n, char asal, char tiba, char tambahan, int *hitung, int langkah){
+
+    if(n==1)
+    {
+        *hitung = *hitung + 1;
+        if (*hitung == langkah)
+        {
+        printf("%d : %c => %c \n", n, asal, tiba);
+        }
+        return;
+    }
+    fungsi(n-1, asal, tambahan, tiba, hitung, langkah);
+
+    *hitung = *hitung + 1;
+    if (*hitung == langkah)
+    {
+        printf("%d : %c => %c\n", n, asal, tiba);
+    }
+    fungsi(n-1, tambahan, tiba, asal, hitung, langkah);
+
+}
+
+int main()
+{
+    int piringan, langkah, hitung;
+    scanf("%d%d", &piringan, &langkah);
+    fungsi(piringan, 'A', 'C', 'B', &hitung, langkah);
+}
