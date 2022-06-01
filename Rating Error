@@ -1,0 +1,26 @@
+// Rating Error
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int maks, min, range, bintang, asdos;
+    scanf("%d%d", &bintang, &asdos);
+    range = bintang / asdos;
+    maks = (bintang - asdos)/4;
+    min = bintang - (asdos * 4);
+    if (range >= 1 && range <= 5){
+        if(bintang - (asdos * 4) <= 0){
+            min = 0;
+        }
+        printf("%d %d", min, maks);
+    }else{
+        printf("-1 -1\n");
+    }
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
