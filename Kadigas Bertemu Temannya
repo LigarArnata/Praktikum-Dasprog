@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+
+struct Mahasiswa {
+    char nrp[20];
+    char nama[100];
+    char asal[100];
+    char angkatan[5];
+    char umur[5];
+};
+
+int main(){
+    int N,i;
+    char temp;
+
+    scanf("%d", &N);
+    struct Mahasiswa arr[N];
+
+    for(i=0;i<N;i++){
+        scanf("%c", &temp);
+        scanf("%s", arr[i].nrp);
+        scanf("%c", &temp);
+        gets(arr[i].nama);
+        scanf("%s", arr[i].angkatan);
+        scanf("%s", arr[i].umur);
+        scanf("%s", arr[i].asal);
+    }
+
+    char cari[100];
+    scanf("%c", &temp);
+    gets(cari);
+
+    for(i=0;i<N;i++){
+        if(strcmp(cari,arr[i].angkatan)==0 || 
+           strcmp(cari,arr[i].asal)==0 || 
+           strcmp(cari,arr[i].nama)==0 || 
+           strcmp(cari,arr[i].nrp)==0 || 
+           strcmp(cari,arr[i].umur)==0){
+           printf("Nama:        %s\nNRP :        %s\nAngkatan:    %s\nUmur:        %s\nAsal:        %s", arr[i].nama, arr[i].nrp, arr[i].angkatan, arr[i].umur, arr[i].asal);
+        }
+    }
+}
+
