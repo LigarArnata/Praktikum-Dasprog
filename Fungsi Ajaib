@@ -1,0 +1,22 @@
+// Fungsi Ajaib
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void fungsi()
+{
+int i;
+long T, C, N, x, formula, hasil;
+scanf("%ld %ld %ld %ld", &T, &C, &N, &x);
+for (i=0; i<N ; i++){
+formula = T * x+ C;
+hasil = abs(formula);
+x = hasil;
+}
+printf("%ld", x);
+}
+
+int main(){
+fungsi();
+return 0;
+}
